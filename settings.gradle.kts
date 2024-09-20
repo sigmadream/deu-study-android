@@ -22,3 +22,5 @@ dependencyResolutionManagement {
 rootProject.name = "DEU Android"
 include(":app")
 include(":ch06")
+include(":todo")
+include(":ch07")
