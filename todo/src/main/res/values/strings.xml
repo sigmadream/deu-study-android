@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">LiteNote</string>
     <string name="notes">Notes</string>
+    <string name="note_title">제목</string>
+    <string name="note_content">내용</string>
 </resources>
