@@ -1,52 +1,37 @@
 package com.sangkon.todo
 
 import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
-import android.widget.LinearLayout
-import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.sangkon.todo.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-
-
-    private lateinit var editTextTask: EditText
-    private lateinit var buttonAdd: Button
-    private lateinit var linearLayoutTasks: LinearLayout
-
+    private lateinit var binding: ActivityMainBinding
+    private lateinit var notesAdapter: ToDoAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
 
-        editTextTask = findViewById(R.id.editTextTask)
-        buttonAdd = findViewById(R.id.buttonAdd)
-        linearLayoutTasks = findViewById(R.id.linearLayoutTasks)
+        val notes = mutableListOf<ToDo>()
 
-        buttonAdd.setOnClickListener {
-            addTask()
+        for (i in 1..200) {
+            notes.add(ToDo(i, "Title $i", "Description $i"))
         }
-    }
 
-    private fun addTask() {
-        val taskText = editTextTask.text.toString().trim()
-        if (taskText.isNotEmpty()) {
-            val taskTextView = TextView(this).apply {
-                text = taskText
-                textSize = 16f
-                setPadding(0, 8, 0, 8)
-            }
-            linearLayoutTasks.addView(taskTextView)
-            editTextTask.text.clear()
-        }
+        notesAdapter = ToDoAdapter(notes, this)
+
+        binding.noteRecyclerView.layoutManager = LinearLayoutManager(this)
+        binding.noteRecyclerView.adapter = notesAdapter
     }
 }
