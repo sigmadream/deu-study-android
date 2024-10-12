@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="start">시작</string>
+    <string name="stop">정지</string>
+    <string name="reset">초기화</string>
+</resources>

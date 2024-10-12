@@ -11,8 +11,8 @@ import androidx.core.view.WindowInsetsCompat
 import com.sangkon.ch08.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-    var initTime = 0L
-    var pauseTime = 0L
+    private var initTime = 0L
+    private var pauseTime = 0L
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

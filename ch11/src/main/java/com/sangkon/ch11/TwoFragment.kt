@@ -10,9 +10,8 @@ import com.sangkon.ch11.databinding.FragmentTwoBinding
 class TwoFragment : Fragment() {
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
+    ): View {
         return FragmentTwoBinding.inflate(inflater, container, false).root
     }
 

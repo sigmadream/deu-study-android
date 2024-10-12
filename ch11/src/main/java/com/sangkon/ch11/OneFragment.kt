@@ -78,7 +78,7 @@ class OneFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         val binding = FragmentOneBinding.inflate(inflater, container, false)
 
         val datas = mutableListOf<String>()

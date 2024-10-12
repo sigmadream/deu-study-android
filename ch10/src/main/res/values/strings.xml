@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">ch10</string>
+    <string name="notification">알림 발생</string>
 </resources>

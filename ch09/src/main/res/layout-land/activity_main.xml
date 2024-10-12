@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -11,41 +10,47 @@
         android:id="@+id/mainTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:gravity="center_horizontal"
-        android:text="Find your phone contacts on Messenger"
+        android:text="@string/messenger"
         android:textSize="20sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/detailTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/mainTextView"
-        android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:gravity="center_horizontal"
-        android:text="Continuously uploading your contacts helps Facebook and Messenger suggest connections and provide and improve ads for you and others, and offer a better service." />
+        android:text="@string/detail"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mainTextView" />
 
     <TextView
         android:id="@+id/delayTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
         android:layout_marginBottom="20dp"
         android:gravity="center_horizontal"
-        android:text="TRUN ON" />
+        android:text="@string/turn_on"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
 
     <Button
+        android:id="@+id/button2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@id/delayTextView"
-        android:layout_centerHorizontal="true"
         android:layout_marginBottom="20dp"
-        android:text="NOT NOW"
-        android:textColor="#FFFFFF" />
+        android:text="@string/not_now"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@id/delayTextView"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
 
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

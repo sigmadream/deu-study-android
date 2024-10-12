@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">ch07</string>
+    <string name="add_contact">연락처 추가</string>
+    <string name="contact_number">02-120</string>
 </resources>

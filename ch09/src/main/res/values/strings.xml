@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">ch09</string>
+    <string name="detail">Continuously uploading your contacts helps Facebook and Messenger suggest connections and provide and improve ads for you and others, and offer a better service.</string>
+    <string name="messenger">Find your phone contacts on Messenger</string>
+    <string name="turn_on">TURN ON</string>
+    <string name="not_now">NOT NOW</string>
 </resources>

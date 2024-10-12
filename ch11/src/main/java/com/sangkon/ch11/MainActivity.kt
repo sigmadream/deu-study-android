@@ -14,14 +14,11 @@ import com.sangkon.ch11.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var toggle: ActionBarDrawerToggle
+    private lateinit var toggle: ActionBarDrawerToggle
 
     class MyFragmentPagerAdapter(activity: FragmentActivity) : FragmentStateAdapter(activity) {
-        val fragments: List<Fragment>
-
-        init {
-            fragments = listOf(OneFragment(), TwoFragment(), ThreeFragment())
-        }
+        private val fragments: List<Fragment> =
+            listOf(OneFragment(), TwoFragment(), ThreeFragment())
 
         override fun getItemCount(): Int = fragments.size
         override fun createFragment(position: Int): Fragment = fragments[position]
@@ -37,7 +34,6 @@ class MainActivity : AppCompatActivity() {
         )
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         toggle.syncState()
-
         val adapter = MyFragmentPagerAdapter(this)
         binding.viewpager.adapter = adapter
     }
@@ -54,7 +50,7 @@ class MainActivity : AppCompatActivity() {
             }
 
             override fun onQueryTextSubmit(query: String?): Boolean {
-                Log.d("kkang", "search text: $query")
+                Log.d("deu", "search text: $query")
                 return true
             }
         })
