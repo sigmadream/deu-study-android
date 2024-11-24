@@ -19,7 +19,7 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "DEU Android"
+rootProject.name = "Android Study"
 include(":app")
 include(":ch06")
 include(":ch07")
@@ -28,3 +28,6 @@ include(":ch09")
 include(":ch10")
 include(":ch11")
 include(":ch12")
+include(":ch13")
+include(":ch14")
+include(":ch17")
