@@ -1,5 +1,12 @@
 # Android 수업용 예제
 
+> 동의대에서 진행된 수업에 활용된 예제입니다. 대부분의 예제는 `Do it! 깡샘의 안드로이드 앱 프로그래밍 with 코틀린`에서 발췌하였으며, 몇몇 예제는 수업 시간이 라이브 코딩으로 작성되었습니다.
+
+## 준비사항
+
+- [Android Studio >= Ladybug(2024.2.1)](https://developer.android.com/studio)
+- [Android SDK >= 15](https://developer.android.com/about/versions/15)
+
 ## Ref
 
 - (수업)교재 : [Do it! 깡샘의 안드로이드 앱 프로그래밍 with 코틀린](https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=340545792)
